@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sunshiney&display=swap");
 .team-1 {
 	background-color: rgb(255, 244, 214);
+	padding-left: 50px;
 }
 .team-1 h2 {
 	color: rgb(97, 71, 44);
@@ -197,5 +198,54 @@
 			rgb(255, 235, 70) 40%,
 			rgb(255, 120, 0) 100%
 		);
+	}
+}
+.team-1 h2 {
+	position: relative;
+	display: inline-block;
+
+	color: rgb(97, 71, 44); /* opgegeven kleur */
+	text-shadow: 0 0 5px rgba(255, 223, 0, 0.4), 0 0 10px rgba(255, 203, 71, 0.3),
+		0 0 15px rgba(255, 159, 28, 0.2);
+	animation: sunGlow 3s ease-in-out infinite alternate,
+		sunFloat 2s ease-in-out infinite alternate;
+}
+.team-1 h3 {
+	position: relative;
+	display: inline-block;
+
+	color: rgb(97, 71, 44); /* opgegeven kleur */
+	text-shadow: 0 0 5px rgba(255, 223, 0, 0.4), 0 0 10px rgba(255, 203, 71, 0.3),
+		0 0 15px rgba(255, 159, 28, 0.2);
+	animation: sunGlow 3s ease-in-out infinite alternate,
+		sunFloat 2s ease-in-out infinite alternate;
+}
+
+/* Zachte glow animatie passend bij de nieuwe kleur */
+@keyframes sunGlow {
+	0% {
+		text-shadow: 0 0 5px rgba(255, 223, 0, 0.4),
+			0 0 10px rgba(255, 203, 71, 0.3), 0 0 15px rgba(255, 159, 28, 0.2);
+	}
+	50% {
+		text-shadow: 0 0 15px rgba(255, 223, 0, 0.7),
+			0 0 25px rgba(255, 203, 71, 0.5), 0 0 35px rgba(255, 159, 28, 0.4);
+	}
+	100% {
+		text-shadow: 0 0 5px rgba(255, 223, 0, 0.4),
+			0 0 10px rgba(255, 203, 71, 0.3), 0 0 15px rgba(255, 159, 28, 0.2);
+	}
+}
+
+/* Subtiele zwevende beweging voor levendigheid */
+@keyframes sunFloat {
+	0% {
+		transform: translateY(0);
+	}
+	50% {
+		transform: translateY(-3px);
+	}
+	100% {
+		transform: translateY(0);
 	}
 }
