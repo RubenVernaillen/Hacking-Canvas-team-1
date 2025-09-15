@@ -204,7 +204,7 @@
 	position: relative;
 	display: inline-block;
 
-	color: rgb(97, 71, 44); /* opgegeven kleur */
+	color: rgb(97, 71, 44);
 	text-shadow: 0 0 5px rgba(255, 223, 0, 0.4), 0 0 10px rgba(255, 203, 71, 0.3),
 		0 0 15px rgba(255, 159, 28, 0.2);
 	animation: sunGlow 3s ease-in-out infinite alternate,
@@ -214,14 +214,13 @@
 	position: relative;
 	display: inline-block;
 
-	color: rgb(97, 71, 44); /* opgegeven kleur */
+	color: rgb(97, 71, 44);
 	text-shadow: 0 0 5px rgba(255, 223, 0, 0.4), 0 0 10px rgba(255, 203, 71, 0.3),
 		0 0 15px rgba(255, 159, 28, 0.2);
 	animation: sunGlow 3s ease-in-out infinite alternate,
 		sunFloat 2s ease-in-out infinite alternate;
 }
 
-/* Zachte glow animatie passend bij de nieuwe kleur */
 @keyframes sunGlow {
 	0% {
 		text-shadow: 0 0 5px rgba(255, 223, 0, 0.4),
@@ -236,8 +235,6 @@
 			0 0 10px rgba(255, 203, 71, 0.3), 0 0 15px rgba(255, 159, 28, 0.2);
 	}
 }
-
-/* Subtiele zwevende beweging voor levendigheid */
 @keyframes sunFloat {
 	0% {
 		transform: translateY(0);
