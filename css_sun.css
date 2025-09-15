@@ -1,0 +1,198 @@
+.team-1 {
+	background-color: rgb(255, 244, 214);
+}
+.team-1 h2 {
+	color: rgb(97, 71, 44);
+}
+.team-1 p {
+	color: rgb(120, 100, 90);
+}
+.team-1 ul {
+	color: rgb(120, 100, 90);
+}
+.team-1 h3 {
+	color: rgb(97, 71, 44);
+}
+.team-1 a {
+	color: rgb(255, 159, 28);
+}
+.team-1 {
+	background: radial-gradient(
+		circle at center,
+		rgb(255, 244, 214) 0%,
+		rgb(255, 203, 71) 40%,
+		rgb(255, 159, 28) 100%
+	);
+	animation: sunPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes sunPulse {
+	0% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 244, 214) 0%,
+			rgb(255, 203, 71) 40%,
+			rgb(255, 159, 28) 100%
+		);
+	}
+	2.5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 246, 218) 0%,
+			rgb(255, 208, 80) 40%,
+			rgb(255, 155, 25) 100%
+		);
+	}
+	5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 248, 222) 0%,
+			rgb(255, 212, 90) 40%,
+			rgb(255, 150, 20) 100%
+		);
+	}
+	7.5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 250, 226) 0%,
+			rgb(255, 216, 95) 40%,
+			rgb(255, 145, 18) 100%
+		);
+	}
+	10% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 252, 230) 0%,
+			rgb(255, 220, 100) 40%,
+			rgb(255, 140, 15) 100%
+		);
+	}
+	12.5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 254, 234) 0%,
+			rgb(255, 224, 95) 40%,
+			rgb(255, 135, 12) 100%
+		);
+	}
+	15% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 236) 0%,
+			rgb(255, 228, 90) 40%,
+			rgb(255, 130, 10) 100%
+		);
+	}
+	17.5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 238) 0%,
+			rgb(255, 230, 85) 40%,
+			rgb(255, 128, 8) 100%
+		);
+	}
+	20% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 240) 0%,
+			rgb(255, 232, 80) 40%,
+			rgb(255, 125, 5) 100%
+		);
+	}
+	22.5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 242) 0%,
+			rgb(255, 234, 75) 40%,
+			rgb(255, 123, 3) 100%
+		);
+	}
+	25% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 244) 0%,
+			rgb(255, 235, 70) 40%,
+			rgb(255, 120, 0) 100%
+		);
+	}
+	27.5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 246) 0%,
+			rgb(255, 236, 68) 40%,
+			rgb(255, 118, 0) 100%
+		);
+	}
+	30% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 248) 0%,
+			rgb(255, 237, 66) 40%,
+			rgb(255, 116, 0) 100%
+		);
+	}
+	32.5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 250) 0%,
+			rgb(255, 238, 65) 40%,
+			rgb(255, 114, 0) 100%
+		);
+	}
+	35% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 252) 0%,
+			rgb(255, 239, 72) 40%,
+			rgb(255, 118, 5) 100%
+		);
+	}
+	37.5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 253) 0%,
+			rgb(255, 240, 74) 40%,
+			rgb(255, 119, 8) 100%
+		);
+	}
+	40% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 254) 0%,
+			rgb(255, 238, 72) 40%,
+			rgb(255, 118, 5) 100%
+		);
+	}
+	42.5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 255) 0%,
+			rgb(255, 237, 71) 40%,
+			rgb(255, 120, 3) 100%
+		);
+	}
+	45% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 255) 0%,
+			rgb(255, 236, 70) 40%,
+			rgb(255, 120, 2) 100%
+		);
+	}
+	47.5% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 255) 0%,
+			rgb(255, 236, 70) 40%,
+			rgb(255, 120, 1) 100%
+		);
+	}
+	50% {
+		background: radial-gradient(
+			circle at center,
+			rgb(255, 255, 255) 0%,
+			rgb(255, 235, 70) 40%,
+			rgb(255, 120, 0) 100%
+		);
+	}
+}
