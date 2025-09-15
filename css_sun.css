@@ -2,6 +2,7 @@
 .team-1 {
 	background-color: rgb(255, 244, 214);
 	padding-left: 50px;
+	border-radius: 20px;
 }
 .team-1 h2 {
 	color: rgb(97, 71, 44);
