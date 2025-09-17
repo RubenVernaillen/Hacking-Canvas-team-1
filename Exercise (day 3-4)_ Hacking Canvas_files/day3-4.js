@@ -13,7 +13,7 @@
 
 		// maak canvas
 		const canvas = document.createElement("canvas");
-		canvas.style.position = "fixed"; // overlay
+		canvas.style.position = "absolute"; // overlay
 		canvas.style.bottom = 0;
 		canvas.style.right = 0;
 		canvas.style.width = "80vw";
