@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-	const container = document.querySelector(".team-1-3");
-	console.log({ container });
-
 	// ---------------------------
 	// Functie om weer op te halen
 	// ---------------------------
@@ -61,8 +58,6 @@ document.addEventListener("DOMContentLoaded", function () {
 			document.querySelector(".team-1-3").style.backgroundImage =
 				"linear-gradient(#d7d2cc, #88a0b4)";
 		}
-
-		console.log(container.style);
 
 		// Zorg dat de achtergrond de hele pagina netjes vult
 		document.querySelector(".team-1-3").style.backgroundRepeat = "no-repeat";
