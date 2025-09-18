@@ -7,11 +7,16 @@
 	ready(async () => {
 		const container = document.querySelector(".team-1-3");
 
+<<<<<<< HEAD
 
 
 		container.style.position = container.style.position || "relative";
 
 
+=======
+		container.style.position = container.style.position || "relative";
+
+>>>>>>> 5b2f75e1c95a7e16dc3c8b25aa917ed205aa25de
 		const canvas = document.createElement("canvas");
 		canvas.style.position = "absolute";
 		canvas.style.bottom = 0;
