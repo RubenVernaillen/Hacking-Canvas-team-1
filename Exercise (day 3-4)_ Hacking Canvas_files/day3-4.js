@@ -22,55 +22,52 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 
-	// ---------------------------
-	// Functie om weer-code te vertalen naar woorden
-	// ---------------------------
+
+
 	function mapWeather(code) {
 		if (code === 0) {
-			return "sun";   // Helder
+			return "sun";
 		}
 		else if (code >= 1 && code <= 3) {
-			return "clouds"; // Wolken
+			return "clouds";
 		}
 		else if ((code >= 45 && code <= 48) || (code >= 51 && code <= 67) || (code >= 80 && code <= 82)) {
-			return "rain";   // Regen / motregen / mist
+			return "rain";
 		}
 		else if ((code >= 71 && code <= 77) || (code >= 85 && code <= 86)) {
-			return "snow";   // Sneeuw
+			return "snow";
 		}
 		else if (code >= 95) {
-			return "rain";   // Onweer → behandelen als regen
+			return "rain";
 		}
 		else {
-			return "clouds"; // Standaard: wolken
+			return "sun";
 		}
 	}
 
 
-	// ---------------------------
-	// Functie om achtergrond aan te passen
-	// ---------------------------
+
 	function setBackground(weather) {
 		if (weather === "sun") {
-			document.body.style.backgroundImage = "linear-gradient(#fff1a8, #a0d8ff)";
+			container.style.backgroundImage = "linear-gradient(#fff1a8, #a0d8ff)";
 		}
 		else if (weather === "clouds") {
-			document.body.style.backgroundImage = "linear-gradient(#d7d2cc, #88a0b4)";
+			container.style.backgroundImage = "linear-gradient(#d7d2cc, #88a0b4)";
 		}
 		else if (weather === "rain") {
-			document.body.style.backgroundImage = "linear-gradient(#6f7bd9, #8f94fb)";
+			container.style.backgroundImage = "linear-gradient(#6f7bd9, #8f94fb)";
 		}
 		else if (weather === "snow") {
-			document.body.style.backgroundImage = "linear-gradient(#e6f0ff, #cfe8ff)";
+			container.style.backgroundImage = "linear-gradient(#e6f0ff, #cfe8ff)";
 		}
 		else {
-			document.body.style.backgroundImage = "linear-gradient(#d7d2cc, #88a0b4)";
+			container.style.backgroundImage = "linear-gradient(#d7d2cc, #88a0b4)";
 		}
 
 		// Zorg dat de achtergrond de hele pagina netjes vult
-		document.body.style.backgroundRepeat = "no-repeat";
-		document.body.style.backgroundAttachment = "fixed";
-		document.body.style.backgroundSize = "cover";
+		container.style.backgroundRepeat = "no-repeat";
+		container.style.backgroundAttachment = "fixed";
+		container.style.backgroundSize = "cover";
 	}
 
 
@@ -78,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Hoofdfunctie die alles samen doet
 	// ---------------------------
 	async function updateWeather() {
-		// Start met Brussel als standaard
+
 		let lat = 50.8503;
 		let lon = 4.3517;
 
@@ -140,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			info.style.textAlign = "center";
 			info.style.fontSize = "24px";
 
-			document.body.appendChild(info);
+			container.appendChild(info);
 		}
 
 		// Zet de tekst met temperatuur
