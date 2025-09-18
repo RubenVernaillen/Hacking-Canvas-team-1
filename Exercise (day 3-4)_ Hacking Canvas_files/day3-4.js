@@ -6,20 +6,20 @@
 
 	ready(async () => {
 		const container = document.querySelector(".team-1-3");
-		if (!container) return;
 
-		// Zorg dat container relative is voor absolute canvas
+
+
 		container.style.position = container.style.position || "relative";
 
-		// maak canvas
+
 		const canvas = document.createElement("canvas");
-		canvas.style.position = "absolute"; // overlay
+		canvas.style.position = "absolute";
 		canvas.style.bottom = 0;
 		canvas.style.right = 0;
 		canvas.style.width = "80vw";
 		canvas.style.height = "80vh";
-		canvas.style.zIndex = "-1"; // achter alle content
-		canvas.style.pointerEvents = "none"; // klikbare elementen blijven werken
+		canvas.style.zIndex = "-1";
+		canvas.style.pointerEvents = "none";
 		document.body.appendChild(canvas);
 
 		const ctx = canvas.getContext("2d");
@@ -30,7 +30,7 @@
 		resize();
 		window.addEventListener("resize", resize);
 
-		// weer API
+
 		async function getWeather(lat = 50.8503, lon = 4.3517) {
 			const res = await fetch(
 				`https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&hourly=temperature_2m,weathercode&timezone=auto`
@@ -78,7 +78,7 @@
 			ctx.fillStyle = gradient;
 			ctx.fillRect(0, 0, w, h);
 
-			// tekst midden onder
+
 			ctx.fillStyle = "#000";
 			ctx.font = "24px Arial";
 			ctx.textAlign = "center";
@@ -95,7 +95,7 @@
 					);
 					lat = pos.coords.latitude;
 					lon = pos.coords.longitude;
-				} catch {}
+				} catch { }
 			}
 
 			const data = await getWeather(lat, lon);
