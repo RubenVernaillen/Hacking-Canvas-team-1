@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 			info.style.textAlign = "center";
 			info.style.fontSize = "24px";
 
-			con.appendChild(info);
+			document.querySelector(".team-1-3").appendChild(info);
 		}
 
 		// Zet de tekst met temperatuur
