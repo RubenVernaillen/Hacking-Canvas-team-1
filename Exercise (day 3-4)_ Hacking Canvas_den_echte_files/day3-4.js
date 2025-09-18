@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 	const container = document.querySelector(".team-1-3");
+	console.log({ container });
 
 	// ---------------------------
 	// Functie om weer op te halen
@@ -55,6 +56,8 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else {
 			container.style.backgroundImage = "linear-gradient(#d7d2cc, #88a0b4)";
 		}
+		console.log(container.style);
+
 
 		// Zorg dat de achtergrond de hele pagina netjes vult
 		container.style.backgroundRepeat = "no-repeat";
@@ -66,6 +69,8 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Hoofdfunctie die alles samen doet
 	// ---------------------------
 	async function updateWeather() {
+
+
 		let lat = 50.8503;
 		let lon = 4.3517;
 
@@ -138,6 +143,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Start: roep de functie meteen aan
 	// ---------------------------
 	updateWeather();
+
+
+
 
 	// En herhaal elke 60 minuten (3600000 ms)
 	setInterval(updateWeather, 60 * 60 * 1000);
