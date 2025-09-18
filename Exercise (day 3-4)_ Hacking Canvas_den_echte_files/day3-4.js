@@ -23,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		return res.json();
 	}
 
+<<<<<<< HEAD
 	function mapWeather(code) {
 		if (code === 0) {
 			return "sun";
@@ -39,6 +40,28 @@ document.addEventListener("DOMContentLoaded", function () {
 		} else if (code >= 95) {
 			return "rain";
 		} else {
+=======
+
+
+
+	function mapWeather(code) {
+		if (code === 0) {
+			return "sun";
+		}
+		else if (code >= 1 && code <= 3) {
+			return "clouds";
+		}
+		else if ((code >= 45 && code <= 48) || (code >= 51 && code <= 67) || (code >= 80 && code <= 82)) {
+			return "rain";
+		}
+		else if ((code >= 71 && code <= 77) || (code >= 85 && code <= 86)) {
+			return "snow";
+		}
+		else if (code >= 95) {
+			return "rain";
+		}
+		else {
+>>>>>>> 494a89bcd623c3bca0baea5b70a9877bd2933b18
 			return "sun";
 		}
 	}
