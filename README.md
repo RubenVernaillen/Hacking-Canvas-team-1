@@ -1,4 +1,4 @@
-Open in Visual Studio Code
+
 Innovationweek Ruben Vernaillen, Raiko Moons✨
 
 We hebben een background skin gemaakt die via een API het weer ophaalt en het weer binnen een uur weergeeft.
