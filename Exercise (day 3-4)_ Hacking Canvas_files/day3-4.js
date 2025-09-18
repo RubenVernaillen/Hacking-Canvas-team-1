@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
 	const container = document.querySelector(".team-1-3");
 
@@ -9,10 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Voorbeeld: getWeather(50.85, 4.35)
 	async function getWeather(lat, lon) {
 		// Bouw de API url
-		let url = "https://api.open-meteo.com/v1/forecast"
-			+ "?latitude=" + lat
-			+ "&longitude=" + lon
-			+ "&hourly=temperature_2m,weathercode&timezone=auto";
+		let url =
+			"https://api.open-meteo.com/v1/forecast" +
+			"?latitude=" +
+			lat +
+			"&longitude=" +
+			lon +
+			"&hourly=temperature_2m,weathercode&timezone=auto";
 
 		// Vraag de data op
 		let res = await fetch(url);
@@ -21,6 +23,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		return res.json();
 	}
 
+<<<<<<< HEAD
 
 
 
@@ -62,6 +65,45 @@ document.addEventListener("DOMContentLoaded", function () {
 		}
 		else {
 			container.style.backgroundImage = "linear-gradient(#d7d2cc, #88a0b4)";
+=======
+	// ---------------------------
+	// Functie om weer-code te vertalen naar woorden
+	// ---------------------------
+	function mapWeather(code) {
+		if (code === 0) {
+			return "sun"; // Helder
+		} else if (code >= 1 && code <= 3) {
+			return "clouds"; // Wolken
+		} else if (
+			(code >= 45 && code <= 48) ||
+			(code >= 51 && code <= 67) ||
+			(code >= 80 && code <= 82)
+		) {
+			return "rain"; // Regen / motregen / mist
+		} else if ((code >= 71 && code <= 77) || (code >= 85 && code <= 86)) {
+			return "snow"; // Sneeuw
+		} else if (code >= 95) {
+			return "rain"; // Onweer → behandelen als regen
+		} else {
+			return "clouds"; // Standaard: wolken
+		}
+	}
+
+	// ---------------------------
+	// Functie om achtergrond aan te passen
+	// ---------------------------
+	function setBackground(weather) {
+		if (weather === "sun") {
+			document.body.style.backgroundImage = "linear-gradient(#fff1a8, #a0d8ff)";
+		} else if (weather === "clouds") {
+			document.body.style.backgroundImage = "linear-gradient(#d7d2cc, #88a0b4)";
+		} else if (weather === "rain") {
+			document.body.style.backgroundImage = "linear-gradient(#6f7bd9, #8f94fb)";
+		} else if (weather === "snow") {
+			document.body.style.backgroundImage = "linear-gradient(#e6f0ff, #cfe8ff)";
+		} else {
+			document.body.style.backgroundImage = "linear-gradient(#d7d2cc, #88a0b4)";
+>>>>>>> 742a67bb0bce64c7369aa6e3fb5b8ca628c76afb
 		}
 
 		// Zorg dat de achtergrond de hele pagina netjes vult
@@ -69,7 +111,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		container.style.backgroundAttachment = "fixed";
 		container.style.backgroundSize = "cover";
 	}
-
 
 	// ---------------------------
 	// Hoofdfunctie die alles samen doet
@@ -96,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		let data = await getWeather(lat, lon);
 
 		// Zet tijden van tekst naar Date-objecten
-		let times = data.hourly.time.map(t => new Date(t));
+		let times = data.hourly.time.map((t) => new Date(t));
 
 		// Pak het huidige moment
 		let now = new Date();
@@ -105,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		let nextHour = new Date(now.getTime() + 60 * 60 * 1000);
 
 		// Zoek in de lijst naar de eerstvolgende tijd
-		let idx = times.findIndex(t => t >= nextHour);
+		let idx = times.findIndex((t) => t >= nextHour);
 
 		// Als niets gevonden is → neem de eerste
 		if (idx < 0) {
@@ -144,7 +185,6 @@ document.addEventListener("DOMContentLoaded", function () {
 		info.innerText = temp + "°C over 1 uur";
 	}
 
-
 	// ---------------------------
 	// Start: roep de functie meteen aan
 	// ---------------------------
@@ -152,6 +192,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// En herhaal elke 60 minuten (3600000 ms)
 	setInterval(updateWeather, 60 * 60 * 1000);
-
 });
-
