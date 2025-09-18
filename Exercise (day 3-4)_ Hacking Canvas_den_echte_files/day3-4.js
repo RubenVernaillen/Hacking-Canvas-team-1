@@ -46,31 +46,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	function setBackground(weather) {
 		if (weather === "sun") {
-			container.style.backgroundImage = "linear-gradient(#fff1a8, #a0d8ff)";
+			document.querySelector(".team-1-3").style.backgroundImage =
+				"linear-gradient(#fff1a8, #a0d8ff)";
 		} else if (weather === "clouds") {
-			container.style.backgroundImage = "linear-gradient(#d7d2cc, #88a0b4)";
+			document.querySelector(".team-1-3").style.backgroundImage =
+				"linear-gradient(#d7d2cc, #88a0b4)";
 		} else if (weather === "rain") {
-			container.style.backgroundImage = "linear-gradient(#6f7bd9, #8f94fb)";
+			document.querySelector(".team-1-3").style.backgroundImage =
+				"linear-gradient(#6f7bd9, #8f94fb)";
 		} else if (weather === "snow") {
-			container.style.backgroundImage = "linear-gradient(#e6f0ff, #cfe8ff)";
+			document.querySelector(".team-1-3").style.backgroundImage =
+				"linear-gradient(#e6f0ff, #cfe8ff)";
 		} else {
-			container.style.backgroundImage = "linear-gradient(#d7d2cc, #88a0b4)";
+			document.querySelector(".team-1-3").style.backgroundImage =
+				"linear-gradient(#d7d2cc, #88a0b4)";
 		}
+
 		console.log(container.style);
 
-
 		// Zorg dat de achtergrond de hele pagina netjes vult
-		container.style.backgroundRepeat = "no-repeat";
-		container.style.backgroundAttachment = "fixed";
-		container.style.backgroundSize = "cover";
+		document.querySelector(".team-1-3").style.backgroundRepeat = "no-repeat";
+		document.querySelector(".team-1-3").style.backgroundAttachment = "fixed";
+		document.querySelector(".team-1-3").style.backgroundSize = "cover";
 	}
+	console.log(setBackground);
 
 	// ---------------------------
 	// Hoofdfunctie die alles samen doet
 	// ---------------------------
 	async function updateWeather() {
-
-
 		let lat = 50.8503;
 		let lon = 4.3517;
 
@@ -138,14 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
 		// Zet de tekst met temperatuur
 		info.innerText = temp + "°C over 1 uur";
 	}
-
+	console.log(updateWeather);
+	console.log(mapWeather);
+	console.log(getWeather);
+	setTimeout(updateWeather, 1000);
 	// ---------------------------
 	// Start: roep de functie meteen aan
 	// ---------------------------
 	updateWeather();
-
-
-
 
 	// En herhaal elke 60 minuten (3600000 ms)
 	setInterval(updateWeather, 60 * 60 * 1000);
